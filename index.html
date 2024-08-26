@@ -169,9 +169,6 @@
     </main>
 
 <footer>
-
-</footer>
-
     <a href="/">
         <i class="fa-solid fa-cookie-bite"></i>
         <p>Cookie Cookie</p>
@@ -184,19 +181,19 @@
     </div>
 
     <div class="apropos">
-        <h3>A propos</h3>
-        <p>Mon adresse : 140 avenue jacques troussel, 83136 Rocbaron. <br>    
-            Mon numéro de téléphone : 05 56 67 78 89.<br>  
-            Je réponds au téléphone du lundi au vendredi de 10 h à 19 h.</p>
+        <h2>A propos</h2>
+        <p>Mon adresse : 140 avenue jacques troussel, 83136 Rocbaron. </p>  
+        <p>Mon numéro de téléphone : <a href="tel:05 56 67 78 89">05 56 67 78 89</a>.</p>
+        <p>Je réponds au téléphone du <strong>lundi au vendredi</strong> de <strong>10 h à 19 h</strong>.</p>
     </div>
     <div class="partenaire">
         <ul>
-            <a href="https://www.castorama.fr/">Castorama</a>
-            <a href="https://www.cash-piscines.com">Cash piscine</a>
-            <a href="https://www.renault.fr">Renault</a>
-            <a href="https://www.kebab-frites.com">Kebab</a>
-            <a href="https://www.credit-agricole.fr">Crédit agricole</a>
-            <a href="https://travail-emploi.gouv.fr">Travail Emploi</a>
+            <li><a href="https://www.castorama.fr/">Castorama</a></li>
+            <li><a href="https://www.cash-piscines.com">Cash piscine</a></li>
+            <li><a href="https://www.renault.fr">Renault</a></li>
+            <li><a href="https://www.kebab-frites.com">Kebab</a></li>
+            <li><a href="https://www.credit-agricole.fr">Crédit agricole</a></li>
+            <li><a href="https://travail-emploi.gouv.fr">Travail Emploi</a></li>
         </ul>
     </div>
     <div class="social">
@@ -204,12 +201,15 @@
         <a href="https://x.com/"><i class="fa-brands fa-twitter"></i></a>
         <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
     </div>
-    <form action="newsletter.php" method="post" style="display: none;">
+    <form action="newsletter.php" method="post">
         <p>Inscription à la newsletter</p>
-        Name: <input type="text" name="name"><br>
-        E-mail: <input type="text" name="email"><br>
-        <input type="submit">
-        </form>
+        <label for="name">Name:</label>
+        <input type="text" name="name">
+        <label for="email">E-mail:</label>
+        <input type="email" name="email">
+        <input type="submit" name="submit">
+    </form>
+</footer>
 <script src="js/script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script src="css/bootstrap/bootstrap.bundle.js"></script>
