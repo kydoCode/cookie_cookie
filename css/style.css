@@ -264,7 +264,7 @@ main{
 }
 
 .footer div{
-    display: flex;
+    /* display: flex; */
     gap:50px;
 }
 
