@@ -249,7 +249,7 @@ article.section2{
     margin:auto;
 }
 
-#contatc form input:nth-child(3){
+#contact form input:nth-child(3){
     height:80px;
 }
 
@@ -277,7 +277,7 @@ article.section2{
     align-items: baseline;
 }
 
-.footer{
+footer{
     background-color: var(--black);
     margin-top: 80px;
     display: flex;
@@ -285,32 +285,47 @@ article.section2{
     align-items: center;
 }
 
-.footer > a{
+footer > a{
     display: flex;
     gap:12px;
     align-items: center;
 }
-
-.footer div{
-    display: flex;
-    gap:50px;
+.apropos h2, .apropos p, footer form{
+    color: var(--white);
 }
 
-.footer2{
+footer form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+footer form div {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+footer form input[type="submit"]{
+    background-color: var(--white);
+    color:var(--black);
+    transition:all 0.2s ease-in-out;
+    padding: 10px 20px;
+    border-radius: 3px;
+    border: none;
+    margin: auto;
+    &:hover{
+        color: var(--hover-link);
+    }
+}
+
+footer .container1440{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
     padding: 15px;
     background: var(--black);
-}
-
-div.tags p,
-.partenaires a{
-    font-size: 0px!important;
-}
-
-.tags ul{
-    height:0!important;
+    align-items: center;
 }
 
 @media screen and (max-width:1024px){
