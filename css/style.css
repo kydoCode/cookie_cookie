@@ -15,6 +15,7 @@
 h1{
     font-size: 70px;
     font-weight: 700;
+    color: var(--white);
 }
 h2{
     font-size: 65px;
@@ -346,6 +347,10 @@ footer .logo{
 }
 
 @media screen and (max-width:1024px){
+    h1{
+        font-size: 50px;
+    }
+    
     .section1> div,
     .section3 {
         grid-template-columns: auto;
@@ -354,6 +359,11 @@ footer .logo{
     .section2 article{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section3 > div{
+        grid-template-columns: auto;
+        gap: 0;
     }
 }
 @media screen and (max-width:767px){
@@ -382,11 +392,54 @@ footer .logo{
     .menu-toggle {
         display: block;
     }
+
+    footer .container1440{
+        grid-template-columns: auto;
+    }
 }
 
 @media screen and (max-width:565px){
     .section2 article{
         display: grid;
         grid-template-columns: auto;
+    }
+}
+
+@media screen and (max-width:425px){
+    h1{
+        font-size: 40px;
+    }
+    h2{
+        font-size: 35px;
+    }
+    h3{
+        font-size: 30px;
+    }
+    h4{
+        font-size: 16px;
+    }
+    p{
+        font-size: 16px;
+    }
+    a{
+        font-size: 16px;
+    }
+    .section1 article div button{
+        font-size: 16px;
+    }
+    .section2 article figure h3{
+        font-size: 16px;
+    }
+    .section2 article figure h4{
+        font-size: 14px;
+    }
+    .section2 article figure button{
+        font-size: 16px;
+    }
+    footer form input[type="submit"]{
+        font-size: 16px;
+    }
+    header{
+        flex-direction: column;
     }
 }
