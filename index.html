@@ -9,11 +9,11 @@
     <title>Cookie Cookie</title>
 </head>
 <body>
-    <header class="header">
+    <header>
         <h1>Cookie Cookie Shop</h1>
         <a href="/">
             <i class="fa-solid fa-cookie-bite"></i>
-            <p href="https://storycom.github.io/Cookie-Cookie/">Cookie Cookie</p>
+            <p class="mb-0" href="https://storycom.github.io/Cookie-Cookie/">Cookie Cookie</p>
         </a>
 
         <button class="menu-toggle" aria-label="Toggle menu">
@@ -21,7 +21,7 @@
         </button>
 
         <nav>
-            <ul id="nav-links">
+            <ul class="mb-0" id="nav-links">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Menu</a></li>
                 <li><a href="#">About</a></li>
@@ -29,11 +29,11 @@
             </ul>
         </nav>
 
-        <i id="Cart" class="fa-solid fa-cart-shopping"></i>
+        <i id="cart" class="fa-solid fa-cart-shopping"></i>
 
         <div id="cart-content" style="display: none;">
             <button id="close-cart">X</button>
-            <h3>Mon panier</h3>
+            <h2>Mon panier</h2>
             <ul id="cart-items"></ul>
             <p>Total: $<span id="cart-total"></span></p>
             <div class="buttonzone">
@@ -44,8 +44,6 @@
     </header>
 
     <main id="main-content">
-        <h1 class="visually-hidden">Cookie Cookie Bakery Shop</h1>
-
         <section id="about" class="section1">
             <div class="content">
                 <article>
@@ -61,61 +59,65 @@
         </section>
 
         <section class="section2">
-            <div class="menu-intro">
-                <h2>Our Menu</h2>
-                <h3>Explore Our Delectable Cookies</h3>
-                <p>Indulge in a wide variety of freshly baked cookies, each with its own unique flavor and texture.</p>
-            </div>
-
-            <div class="cookie-list">
-                <article>
-                    <figure>
-                        <img src="img/1.jpg" alt="Chocolate Chip Cookies">
-                        <figcaption>
-                            <h3>Chocolate Chip</h3>
-                            <p>Our classic chocolate chip cookies, baked to perfection.</p>
-                            <p>$2.50</p>
-                            <button type="button" data-name="Chocolate Chip" data-price="2.50">Add to Cart</button>
-                        </figcaption>
-                    </figure>
-                    <figure>
-                        <img src="img/2.jpg" alt="Oatmeal Raisin Cookies">
-                        <figcaption>
-                            <h3>Oatmeal Raisin</h3>
-                            <p>Chewy oatmeal cookies with plump raisins</p>
-                            <p>$2.25</p>
-                            <button type="button" data-name="Oatmeal Raisin" data-price="2.25">Add to Cart</button>
-                        </figcaption>
-                    </figure>
-                    <figure>
-                        <img src="img/3.jpg" alt="Peanut Butter Cookies">
-                        <figcaption>
-                            <h3>Peanut Butter</h3>
-                            <p>Rich and creamy peanut butter cookies.</p>
-                            <p>$2.75</p>
-                            <button type="button" data-name="Peanut Butter" data-price="2.75">Add to Cart</button>
-                        </figcaption>
-                    </figure>
-                    <figure>
-                        <img src="img/4.jpg" alt="Sugar Cookies">
-                        <figcaption>
-                            <h3>Sugar</h3>
-                            <p>Soft and chewy sugar cookies, perfect for any occasion.</p>
-                            <p>$2.00</p>
-                            <button type="button" data-name="Sugar" data-price="2.00">Add to Cart</button>
-                        </figcaption>
-                    </figure>
-                </article>
+            <div class="container1440">
+                <div class="menu-intro">
+                    <h2>Our Menu</h2>
+                    <h3>Explore Our Delectable Cookies</h3>
+                    <p>Indulge in a wide variety of freshly baked cookies, each with its own unique flavor and texture.</p>
+                </div>
+    
+                <div class="cookie-list">
+                    <article>
+                        <figure>
+                            <img src="img/1.jpg" alt="Chocolate Chip Cookies">
+                            <figcaption>
+                                <h3>Chocolate Chip</h3>
+                                <p>Our classic chocolate chip cookies, baked to perfection.</p>
+                                <p>$2.50</p>
+                                <button type="button" data-name="Chocolate Chip" data-price="2.50">Add to Cart</button>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img src="img/2.jpg" alt="Oatmeal Raisin Cookies">
+                            <figcaption>
+                                <h3>Oatmeal Raisin</h3>
+                                <p>Chewy oatmeal cookies with plump raisins</p>
+                                <p>$2.25</p>
+                                <button type="button" data-name="Oatmeal Raisin" data-price="2.25">Add to Cart</button>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img src="img/3.jpg" alt="Peanut Butter Cookies">
+                            <figcaption>
+                                <h3>Peanut Butter</h3>
+                                <p>Rich and creamy peanut butter cookies.</p>
+                                <p>$2.75</p>
+                                <button type="button" data-name="Peanut Butter" data-price="2.75">Add to Cart</button>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img src="img/4.jpg" alt="Sugar Cookies">
+                            <figcaption>
+                                <h3>Sugar</h3>
+                                <p>Soft and chewy sugar cookies, perfect for any occasion.</p>
+                                <p>$2.00</p>
+                                <button type="button" data-name="Sugar" data-price="2.00">Add to Cart</button>
+                            </figcaption>
+                        </figure>
+                    </article>
+                </div>
             </div>
         </section>
 
         <section class="section3">
-            <img src="img/6.jpg" alt="Cookie Shop">
-            <article>
-                <h2>About Us</h2>
-                <p>At Cookie Cookie, we are a family-owned bakery that has been serving our community with love and dedication for over 20 years. Our cookies are made with the finest ingredients, baked to perfection, and infused with the warmth and comfort of a neighborhood bakeshop.</p>
-                <p>We take pride in our commitment to quality, sustainability, and supporting local suppliers. Our mission is to bring joy and delight to every customer who steps through our doors or visits our online shop.</p>
-            </article>
+            <div class="container1440">
+                <img src="img/6.jpg" alt="Cookie Shop">
+                <article>
+                    <h2>About Us</h2>
+                    <p>At Cookie Cookie, we are a family-owned bakery that has been serving our community with love and dedication for over 20 years. Our cookies are made with the finest ingredients, baked to perfection, and infused with the warmth and comfort of a neighborhood bakeshop.</p>
+                    <p>We take pride in our commitment to quality, sustainability, and supporting local suppliers. Our mission is to bring joy and delight to every customer who steps through our doors or visits our online shop.</p>
+                </article>
+            </div>
         </section>
     
         <section id="contact">
