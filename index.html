@@ -121,15 +121,24 @@
         </section>
     
         <section id="contact">
-            <h2>Contact Us</h2>
-            <h3>Get in Touch</h3>
-            <p>Have a question, feedback, or just want to say hello? Fill out the form below and we'll get back to you as soon as possible.</p>
-            <form>
-                <input type="text" placeholder="Name" aria-label="Name">
-                <input type="email" placeholder="Email" aria-label="Email">
-                <textarea placeholder="Message" aria-label="Message"></textarea>
-                <button type="submit">Submit</button>
-            </form>
+            <div class="container1440">
+                <h2>Contact Us</h2>
+                <h3>Get in Touch</h3>
+                <p>Have a question, feedback, or just want to say hello? Fill out the form below and we'll get back to you as soon as possible.</p>
+                <form>
+                    <input type="text" placeholder="Name" aria-label="Name" required>
+                    <input type="email" placeholder="Email" aria-label="Email" required>
+                    <textarea placeholder="Message" aria-label="Message" required></textarea>
+                    <div>
+                        <input type="checkbox" id="rgpd-consent" name="rgpd-consent" required>
+                        <label for="rgpd-consent">
+                            J'accepte que mes données personnelles soient collectées et traitées conformément au RGPD.
+                            <a href="[URL de la politique de confidentialité]" target="_blank">En savoir plus sur notre politique de confidentialité</a>.
+                        </label>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
         </section>
     </main>
 
