@@ -31,12 +31,12 @@ document.querySelector('.menu-toggle').addEventListener('click', () => {
     navLinks.classList.toggle('show');
 });
 
-var button = document.querySelector('#addtocart');
+let button = document.querySelector('.addtocart');
 
 
 // Ajout au panier
 
-document.querySelectorAll('#addtoCart').forEach(button => {
+document.querySelectorAll('.addtoCart').forEach(button => {
     button.addEventListener('click', () => {
         const productName = button.getAttribute('data-name');
         const productPrice = button.getAttribute('data-price');
