@@ -223,7 +223,7 @@ article.section2{
     }
 }
 
-.section3{
+.section3 > div{
     max-width: 1440px;
     margin: 80px auto;
     display: grid;
@@ -233,7 +233,9 @@ article.section2{
 }
 
 .section3 img{
-    height:60%;
+    height: 60%;
+    width: 100%;
+    object-fit: cover;
 }
 
 .formulaire{
