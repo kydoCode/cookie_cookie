@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 *{
-    margin:none;
     margin:0;
     font-family: "Open Sans", sans-serif;
 }
@@ -29,14 +28,6 @@ h4{
     font-size: 20px;
     font-weight: 400;
 }
-h5{
-    font-size: 18px;
-    font-weight: 400;
-}
-h6{
-    font-size: 16px;
-    font-weight: 400;
-}
 
 p{
     font-size: 20px;
@@ -51,13 +42,24 @@ a{
     transition:all 0.2s ease-in-out;
 
     &:hover{
-        color:var(--black);
+        color:var(--hover-link);
     }
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+.container1440{
+    max-width: 1440px;
+    margin:auto;
+    padding: 0 15px;
 }
 
 /* header */
 
-.header{
+header{
     background-color: var(--black);
     display: flex;
     justify-content: space-between;
@@ -65,13 +67,13 @@ a{
     padding:0 10px;
 }
 
-.header ul{
+header ul{
     display: flex;
     gap:50px;
     margin-right: 80px;
 }
 
-.header>a{
+header > a{
     display: flex;
     gap:10px;
     align-items: center;
@@ -85,7 +87,7 @@ a{
     font-size: 24px;
 }
 
-#Cart{
+#cart{
     position: absolute;
     right: 20px;
     color: #fff;
@@ -110,9 +112,12 @@ a{
     padding: 0;
 }
 
+/* MAIN */
+
 img{
     width:100%;
     object-fit: cover;
+    height: 100%;
 }
 
 .section1{
@@ -138,9 +143,13 @@ img{
     color:var(--black);
     border:none;
     margin-top: 50px;
-
+    padding: 10px 20px;
+    border-radius: 3px;
+    transition: all 0.2s ease-in-out;
     &:hover{
-        background-color: var(--black);
+        color: var(--hover-link);
+        background-color: var(--main-color);
+        box-shadow: none;
     }
 }
 
@@ -163,6 +172,16 @@ article.section2{
 .section2 article figure{
     flex:1 0 20%;
     box-shadow: 3px 5px 12px 18px #f7f6f6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.section2 article figure figcaption {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
 }
 
 .section2 article figure img{
@@ -194,13 +213,17 @@ article.section2{
     background-color: var(--black);
     color:var(--white);
     transition:all 0.2s ease-in-out;
-
+    align-self: center;
+    margin-top: auto;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
     &:hover{
-        background-color:var(--main-color);
+        color: var(--hover-link);
     }
 }
 
-.section3{
+.section3 > div{
     max-width: 1440px;
     margin: 80px auto;
     display: grid;
@@ -210,13 +233,9 @@ article.section2{
 }
 
 .section3 img{
-    height:60%;
-}
-
-main{
-    max-width: 860px;
-    margin:auto;
-    text-align: center;
+    height: 60%;
+    width: 100%;
+    object-fit: cover;
 }
 
 .formulaire{
