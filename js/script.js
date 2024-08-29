@@ -33,7 +33,7 @@ document.querySelector('.menu-toggle').addEventListener('click', () => {
 document.querySelectorAll('.addtoCart').forEach(button => {
     button.addEventListener('click', () => {
         const productName = button.getAttribute('data-name');
-        const productPrice = button.getAttribute('data-price');
+        const productPrice = parseFloat(button.getAttribute('data-price'));
 
         // Récupérer les éléments actuels du panier
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
