@@ -10,18 +10,18 @@
     <title>Cookie Cookie</title>
 </head>
 <body>
-    <header>
+    <header role="banner">
         <h1>Cookie Cookie Shop</h1>
-        <a href="/" class="mb-0">
+        <a href="/" class="mb-0" aria-label="Home">
             <i class="fa-solid fa-cookie-bite"></i>
             Cookie Cookie
         </a>
 
-        <button class="menu-toggle" aria-label="Toggle menu">
+        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
             <i class="fas fa-bars"></i>
         </button>
 
-        <nav>
+        <nav role="navigation">
             <ul class="mb-0" id="nav-links">
                 <li><a href="/">Home</a></li>
                 <li><a href="#">Menu</a></li>
@@ -30,10 +30,10 @@
             </ul>
         </nav>
 
-        <i id="cart" class="fa-solid fa-cart-shopping"></i>
+        <i id="cart" class="fa-solid fa-cart-shopping" aria-label="View Cart" aria-expanded="false" aria-controls="cart-content"></i>
 
         <div id="cart-content" style="display: none;">
-            <button id="close-cart">X</button>
+            <button id="close-cart" aria-label="Close Cart">X</button>
             <h2>Mon panier</h2>
             <ul id="cart-items"></ul>
             <p>Total: $<span id="cart-total"></span></p>
@@ -44,7 +44,7 @@
         </div>
     </header>
 
-    <main id="main-content">
+    <main id="main-content" role="main">
         <section id="about" class="section1">
             <div class="content">
                 <article>
@@ -75,7 +75,7 @@
                                 <h3>Chocolate Chip</h3>
                                 <p>Our classic chocolate chip cookies, baked to perfection.</p>
                                 <p>$2.50</p>
-                                <button class="addtoCart" type="button" data-name="Chocolate Chip" data-price="2.50">Add to Cart</button>
+                                <button class="addtoCart" type="button" data-name="Chocolate Chip" data-price="2.50" aria-label="Add Chocolate Chip Cookies to Cart">Add to Cart</button>
                             </figcaption>
                         </figure>
                         <figure>
@@ -134,7 +134,7 @@
                         <input type="checkbox" id="rgpd-consent" name="rgpd-consent" required>
                         <label for="rgpd-consent">
                             J'accepte que mes données personnelles soient collectées et traitées conformément au RGPD.
-                            <a href="#" target="/">En savoir plus sur notre politique de confidentialité</a>.
+                            <a href="#" target="/" aria-label="Opens in a new tab">En savoir plus sur notre politique de confidentialité</a>.
                         </label>
                     </div>
                     <button type="submit">Submit</button>
@@ -143,9 +143,9 @@
         </section>
     </main>
 
-<footer>
+<footer role="contentinfo">
     <div class="container1440">
-        <a class="logo" href="/">
+        <a class="logo" href="/" aria-label="Home">
             <i class="fa-solid fa-cookie-bite"></i>
             <p class="mb-0">Cookie Cookie</p>
         </a>
