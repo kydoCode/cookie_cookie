@@ -13,9 +13,9 @@
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <header role="banner">
         <h1>Cookie Cookie Shop</h1>
-        <a href="/" aria-label="Home">
+        <a href="/" class="mb-0" aria-label="Home">
             <i class="fa-solid fa-cookie-bite"></i>
-            <p class="mb-0">Cookie Cookie</p>
+            Cookie Cookie
         </a>
 
         <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
@@ -24,7 +24,7 @@
 
         <nav role="navigation">
             <ul class="mb-0" id="nav-links">
-                <li><a href="#">Home</a></li>
+                <li><a href="/">Home</a></li>
                 <li><a href="#">Menu</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Contact</a></li>
@@ -144,7 +144,7 @@
                         <input type="checkbox" id="rgpd-consent" name="rgpd-consent" required>
                         <label for="rgpd-consent">
                             J'accepte que mes données personnelles soient collectées et traitées conformément au RGPD.
-                            <a href="[URL de la politique de confidentialité]" target="_blank" aria-label="Opens in a new tab">En savoir plus sur notre politique de confidentialité</a>.
+                            <a href="#" target="/" aria-label="Opens in a new tab">En savoir plus sur notre politique de confidentialité.</a>
                         </label>
                     </div>
                     <button type="submit">Submit</button>
@@ -155,21 +155,26 @@
 
 <footer role="contentinfo">
     <div class="container1440">
-        <a href="/" aria-label="Home">
+        <a class="logo" href="/" aria-label="Home">
             <i class="fa-solid fa-cookie-bite"></i>
-            <p>Cookie Cookie</p>
+            <p class="mb-0">Cookie Cookie</p>
         </a>
         <div>
             <a href="#">Privacy Policy</a>
             <a href="#">Terms of Service</a>
             <a href="#">Refund Policy</a>
         </div>
-        <div class="apropos">
+        <div class="apropos" itemscope itemtype="http://schema.org/LocalBusiness">
             <h2>A propos</h2>
-            <p>Mon adresse : 140 avenue Jacques Troussel, 83136 Rocbaron.</p>  
-            <p>Mon numéro de téléphone : <a href="tel:05 56 67 78 89">05 56 67 78 89</a>.</p>
-            <p>Je réponds au téléphone du <strong>lundi au vendredi</strong> de <strong>10 h à 19 h</strong>.</p>
+            <p>Mon adresse : <span itemprop="streetAddress">140 avenue Jacques Troussel</span>, 
+            <span itemprop="postalCode">83136</span> 
+            <span itemprop="addressLocality">Rocbaron</span>.</p>
+            <p>Mon numéro de téléphone : 
+            <a href="tel:0556677889"><span itemprop="telephone">05 56 67 78 89</span></a>.</p>
+            <p><time itemprop="openingHours" datetime="Mo,Fr 10:00-19:00">Je réponds au téléphone du 
+            <strong>lundi au vendredi</strong> de <strong>10 h à 19 h</strong>.</time></p>
         </div>
+        
         <div class="partenaire">
             <ul>
                 <li><a href="https://www.castorama.fr/">Castorama</a></li>
@@ -177,6 +182,29 @@
                 <li><a href="https://www.ikea.com/fr/fr/">Ikea</a></li>
             </ul>
         </div>
+        <div class="social" itemscope itemtype="http://schema.org/Person">
+            <a href="https://www.instagram.com/" itemprop="sameAs" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://x.com/" itemprop="sameAs" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="https://www.facebook.com/" itemprop="sameAs" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+        </div>
+        <form action="newsletter.php" method="post">
+            <p>Inscription à la newsletter</p>
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+            </div>
+            <div>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <input type="submit" name="submit">
+        </form>
     </div>
 </footer>
 </body>
