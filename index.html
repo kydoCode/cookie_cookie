@@ -12,9 +12,9 @@
 <body>
     <header>
         <h1>Cookie Cookie Shop</h1>
-        <a href="/">
+        <a href="/" class="mb-0">
             <i class="fa-solid fa-cookie-bite"></i>
-            <a class="mb-0" href="https://storycom.github.io/Cookie-Cookie/">Cookie Cookie</a>
+            Cookie Cookie
         </a>
 
         <button class="menu-toggle" aria-label="Toggle menu">
@@ -154,11 +154,15 @@
             <a href="#">Terms of Service</a>
             <a href="#">Refund Policy</a>
         </div>
-        <div class="apropos">
+        <div class="apropos" itemscope itemtype="http://schema.org/LocalBusiness">
             <h2>A propos</h2>
-            <p>Mon adresse : <span itemprop="streetAddress">140 avenue jacques troussel</span>, <span itemprop="postalCode">83136</span> <span itemprop="addressLocality">Rocbaron</span>.</p>  
-            <p>Mon numéro de téléphone : <a href="tel:0556677889"><span itemprop="telephone">05 56 67 78 89</span></a>.<p></p>
-            <p><time itemprop="openingHours" datetime="Mo,Fr 10:00-19:00">Je réponds au téléphone du <strong>lundi au vendredi</strong> de <strong>10 h à 19 h</strong>.</time><p>
+            <p>Mon adresse : <span itemprop="streetAddress">140 avenue jacques troussel</span>, 
+            <span itemprop="postalCode">83136</span> 
+            <span itemprop="addressLocality">Rocbaron</span>.</p>
+            <p>Mon numéro de téléphone : 
+            <a href="tel:0556677889"><span itemprop="telephone">05 56 67 78 89</span></a>.</p>
+            <p><time itemprop="openingHours" datetime="Mo,Fr 10:00-19:00">Je réponds au téléphone du 
+            <strong>lundi au vendredi</strong> de <strong>10 h à 19 h</strong>.</time></p>
         </div>
         <div class="partenaire">
             <ul>
@@ -170,10 +174,16 @@
                 <li><a href="https://travail-emploi.gouv.fr">Travail Emploi</a></li>
             </ul>
         </div>
-        <div class="social">
-            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://x.com/"><i class="fa-brands fa-twitter"></i></a>
-            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+        <div class="social" itemscope itemtype="http://schema.org/Person">
+            <a href="https://www.instagram.com/" itemprop="sameAs" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://x.com/" itemprop="sameAs" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="https://www.facebook.com/" itemprop="sameAs" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
         </div>
         <form action="newsletter.php" method="post">
             <p>Inscription à la newsletter</p>
