@@ -13,30 +13,30 @@
 }
 
 h1{
-    font-size: 70px;
+    /* font-size: 70px; */
     font-weight: 700;
     color: var(--white);
 }
 h2{
-    font-size: 65px;
+    /* font-size: 65px; */
     font-weight: 700;
 }
 h3{
-    font-size: 60px;
+    /* font-size: 60px; */
     font-weight: 700;
 }
 h4{
-    font-size: 20px;
+    /* font-size: 20px; */
     font-weight: 400;
 }
 
 p{
-    font-size: 20px;
+    /* font-size: 20px; */
     font-weight: 400;
 }
 
 a{
-    font-size: 20px;
+    /* font-size: 20px; */
     font-weight: 400;
     text-decoration: none;
     color:var(--white);
@@ -337,7 +337,7 @@ body > footer > div > div:nth-child(2){
 
 .social{
     display: flex;
-    justify-content: space-evenly;
+    gap: 20px;   
 }
 
 footer .logo{
