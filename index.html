@@ -3,24 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="keywords" content="Délicieux cookies">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/58aafaf913.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <title>Cookie Cookie</title>
 </head>
 <body>
-    <header>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header role="banner">
         <h1>Cookie Cookie Shop</h1>
-        <a href="/">
+        <a href="/" aria-label="Home">
             <i class="fa-solid fa-cookie-bite"></i>
-            <p class="mb-0" href="https://storycom.github.io/Cookie-Cookie/">Cookie Cookie</p>
+            <p class="mb-0">Cookie Cookie</p>
         </a>
 
-        <button class="menu-toggle" aria-label="Toggle menu">
+        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
             <i class="fas fa-bars"></i>
         </button>
 
-        <nav>
+        <nav role="navigation">
             <ul class="mb-0" id="nav-links">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Menu</a></li>
@@ -29,10 +31,10 @@
             </ul>
         </nav>
 
-        <i id="cart" class="fa-solid fa-cart-shopping"></i>
+        <button id="cart" class="fa-solid fa-cart-shopping" aria-label="View Cart" aria-expanded="false" aria-controls="cart-content"></button>
 
         <div id="cart-content" style="display: none;">
-            <button id="close-cart">X</button>
+            <button id="close-cart" aria-label="Close Cart">X</button>
             <h2>Mon panier</h2>
             <ul id="cart-items"></ul>
             <p>Total: $<span id="cart-total"></span></p>
@@ -43,7 +45,7 @@
         </div>
     </header>
 
-    <main id="main-content">
+    <main id="main-content" role="main">
         <section id="about" class="section1">
             <div class="content">
                 <article>
@@ -54,7 +56,7 @@
                         <button type="button">Contact Us</button>
                     </div>
                 </article>
-                <img src="img/5.jpg" alt="Delicious Cookies">
+                <img src="img/5.jpg" alt="Plateau de cookies aux pépites de chocolat">
             </div>
         </section>
 
@@ -74,7 +76,7 @@
                                 <h3>Chocolate Chip</h3>
                                 <p>Our classic chocolate chip cookies, baked to perfection.</p>
                                 <p>$2.50</p>
-                                <button class="addtoCart" type="button" data-name="Chocolate Chip" data-price="2.50">Add to Cart</button>
+                                <button class="addtoCart" type="button" data-name="Chocolate Chip" data-price="2.50" aria-label="Add Chocolate Chip Cookies to Cart">Add to Cart</button>
                             </figcaption>
                         </figure>
                         <figure>
@@ -83,7 +85,7 @@
                                 <h3>Oatmeal Raisin</h3>
                                 <p>Chewy oatmeal cookies with plump raisins</p>
                                 <p>$2.25</p>
-                                <button class="addtoCart" type="button" data-name="Oatmeal Raisin" data-price="2.25">Add to Cart</button>
+                                <button class="addtoCart" type="button" data-name="Oatmeal Raisin" data-price="2.25" aria-label="Add Oatmeal Raisin Cookies to Cart">Add to Cart</button>
                             </figcaption>
                         </figure>
                         <figure>
@@ -92,7 +94,7 @@
                                 <h3>Peanut Butter</h3>
                                 <p>Rich and creamy peanut butter cookies.</p>
                                 <p>$2.75</p>
-                                <button class="addtoCart" type="button" data-name="Peanut Butter" data-price="2.75">Add to Cart</button>
+                                <button class="addtoCart" type="button" data-name="Peanut Butter" data-price="2.75" aria-label="Add Peanut Butter Cookies to Cart">Add to Cart</button>
                             </figcaption>
                         </figure>
                         <figure>
@@ -101,7 +103,7 @@
                                 <h3>Sugar</h3>
                                 <p>Soft and chewy sugar cookies, perfect for any occasion.</p>
                                 <p>$2.00</p>
-                                <button class="addtoCart" type="button" data-name="Sugar" data-price="2.00">Add to Cart</button>
+                                <button class="addtoCart" type="button" data-name="Sugar" data-price="2.00" aria-label="Add Sugar Cookies to Cart">Add to Cart</button>
                             </figcaption>
                         </figure>
                     </article>
@@ -111,7 +113,7 @@
 
         <section class="section3">
             <div class="container1440">
-                <img src="img/6.jpg" alt="Cookie Shop">
+                <img src="img/6.jpg" alt="Vue extérieure du Cookie Shop">
                 <article>
                     <h2>About Us</h2>
                     <p>At Cookie Cookie, we are a family-owned bakery that has been serving our community with love and dedication for over 20 years. Our cookies are made with the finest ingredients, baked to perfection, and infused with the warmth and comfort of a neighborhood bakeshop.</p>
@@ -126,14 +128,23 @@
                 <h3>Get in Touch</h3>
                 <p>Have a question, feedback, or just want to say hello? Fill out the form below and we'll get back to you as soon as possible.</p>
                 <form>
-                    <input type="text" placeholder="Name" aria-label="Name" required>
-                    <input type="email" placeholder="Email" aria-label="Email" required>
-                    <textarea placeholder="Message" aria-label="Message" required></textarea>
+                    <div>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" placeholder="Name" aria-label="Name" required>
+                    </div>
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" placeholder="Email" aria-label="Email" required>
+                    </div>
+                    <div>
+                        <label for="message">Message:</label>
+                        <textarea id="message" placeholder="Message" aria-label="Message" required></textarea>
+                    </div>
                     <div>
                         <input type="checkbox" id="rgpd-consent" name="rgpd-consent" required>
                         <label for="rgpd-consent">
                             J'accepte que mes données personnelles soient collectées et traitées conformément au RGPD.
-                            <a href="[URL de la politique de confidentialité]" target="_blank">En savoir plus sur notre politique de confidentialité</a>.
+                            <a href="[URL de la politique de confidentialité]" target="_blank" aria-label="Opens in a new tab">En savoir plus sur notre politique de confidentialité</a>.
                         </label>
                     </div>
                     <button type="submit">Submit</button>
@@ -142,9 +153,9 @@
         </section>
     </main>
 
-<footer>
+<footer role="contentinfo">
     <div class="container1440">
-        <a href="/">
+        <a href="/" aria-label="Home">
             <i class="fa-solid fa-cookie-bite"></i>
             <p>Cookie Cookie</p>
         </a>
@@ -155,39 +166,18 @@
         </div>
         <div class="apropos">
             <h2>A propos</h2>
-            <p>Mon adresse : 140 avenue jacques troussel, 83136 Rocbaron. </p>  
+            <p>Mon adresse : 140 avenue Jacques Troussel, 83136 Rocbaron.</p>  
             <p>Mon numéro de téléphone : <a href="tel:05 56 67 78 89">05 56 67 78 89</a>.</p>
             <p>Je réponds au téléphone du <strong>lundi au vendredi</strong> de <strong>10 h à 19 h</strong>.</p>
         </div>
         <div class="partenaire">
             <ul>
                 <li><a href="https://www.castorama.fr/">Castorama</a></li>
-                <li><a href="https://www.cash-piscines.com">Cash piscine</a></li>
-                <li><a href="https://www.renault.fr">Renault</a></li>
-                <li><a href="https://www.kebab-frites.com">Kebab</a></li>
-                <li><a href="https://www.credit-agricole.fr">Crédit agricole</a></li>
-                <li><a href="https://travail-emploi.gouv.fr">Travail Emploi</a></li>
+                <li><a href="https://www.boulanger.com/">Boulanger</a></li>
+                <li><a href="https://www.ikea.com/fr/fr/">Ikea</a></li>
             </ul>
         </div>
-        <div class="social">
-            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://x.com/"><i class="fa-brands fa-twitter"></i></a>
-            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
-        </div>
-        <form action="newsletter.php" method="post">
-            <p>Inscription à la newsletter</p>
-            <div>
-                <label for="name">Name:</label>
-                <input type="text" name="name">
-            </div>
-            <div>
-                <label for="email">E-mail:</label>
-                <input type="email" name="email">
-            </div>
-            <input type="submit" name="submit">
-        </form>
     </div>
 </footer>
-<script src="js/script.js"></script>
 </body>
 </html>
